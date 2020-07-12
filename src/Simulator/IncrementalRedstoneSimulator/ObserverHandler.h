@@ -30,7 +30,7 @@ public:
 		auto Observed = PoweringData(BlockType, BlockMeta);
 		auto Previous = a_Data->ExchangeUpdateOncePowerData(a_Position, Observed);
 
-		// Determine if to signal an update based on the block previously observed changed
+		// Determine if to signal an update based on if the block previously observed changed
 		return (Previous.PoweringBlock != Observed.PoweringBlock) || (Previous.PowerLevel != Observed.PowerLevel);
 	}
 
